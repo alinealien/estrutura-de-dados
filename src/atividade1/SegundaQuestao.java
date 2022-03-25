@@ -13,5 +13,7 @@ uma lista. Após isso, o programa deve:
 
 public class SegundaQuestao {
 
+    int = 10;
+
 
 }
