@@ -1,21 +1,42 @@
 package atividade1;
 import java.util.Scanner;
 
-//1. Crie um método recursivo que receba um número inteiro N, calcule e imprima o somatório
-//de todos os números de N até 0
+/*1. Crie um método recursivo que receba um número inteiro N, calcule e imprima o somatório
+de todos os números de N até 0
+
+RECURSÃO:
+Recursão é um método de programação no qual uma função chama a si mesma.
+A recursão é utilizada quando queremos resolver um subproblema do mesmo tipo menor.
+
+
+*/
 
 public class PrimeiraQuestao {
 
+    public int somatorioNumeros(int n) {
+
+        int nu = 0;
+        if (nu == 0) {
+            return 0;
+        } else {
+            return nu + somatorioNumeros(nu-1) + nu;
+        }
+    }
+
     public static void main(String[] args) {
-
         Scanner scan = new Scanner(System.in);
-
         System.out.println("Digite um numero:");
-        int n = scan.nextInt(); //recebe numero inteiro
-        System.out.println("__________________________");
+        int nu = scan.nextInt();
 
-        int soma = 0;
+        System.out.println(nu + (nu-1) + nu);
 
+        //System.out.println("Digite um numero:");
+        //int n = scan.nextInt(); //recebe numero inteiro
+        //System.out.println("__________________________");
+
+    }
+}
+        /*
         for (int somatorio = n; somatorio >= 0; somatorio--) {
 
             System.out.println(somatorio);
@@ -45,6 +66,5 @@ public class PrimeiraQuestao {
         }
 
         System.out.println(somatorio); */
-
 
 

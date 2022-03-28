@@ -31,8 +31,9 @@ public static void main(String[] args) {
 
             if(numeros.length% 2 == 0){
                 par = true;
-            }
 
+            }
+            System.out.println(i);
         }
 
         System.out.println("___________________________________");
