@@ -16,27 +16,34 @@ uma lista. Após isso, o programa deve:
 public class SegundaQuestao {
 public static void main(String[] args) {
 
+
         Scanner ler = new Scanner(System.in);
 
         int numeros[] = new int[10]; //Vetor de 10 posições
 
-
-        int par = 0;
+        boolean par = true;
         int impar = 0;
-
 
 
         for (int i = 0; i < numeros.length; i++) { //para ir de 0 até o tamanho do vetor
             System.out.println("Informe um número: "); // ele vai pedir 10 vezes
             numeros[i] = ler.nextInt(); //vair guardar os numeros
 
+            if(numeros.length% 2 == 0){
+                par = true;
+            }
+
         }
 
         System.out.println("___________________________________");
         Arrays.stream(numeros).forEach(System.out::println); //Imprimiu todos os elementos
 
+    System.out.println();
+
 
             }
+
+
         }
 
 
