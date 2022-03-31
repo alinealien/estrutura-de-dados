@@ -6,4 +6,6 @@ imprimir como saída na tela o nome da pessoa e sua posição na fila */
 
 public class QuartaQuestao {
 
+
+
 }
