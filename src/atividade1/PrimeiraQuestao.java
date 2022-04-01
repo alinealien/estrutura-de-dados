@@ -26,10 +26,7 @@ public class PrimeiraQuestao {
         int num = 0, i = 0;
         int somatorio;
 
-
-
         }
-
 
     static int somatorio(int numero) {
 
