@@ -12,6 +12,8 @@ A recursão é utilizada quando queremos resolver um subproblema do mesmo tipo m
 
 */
 
+//FINALIZADA
+
 public class PrimeiraQuestao {
 
     public static void main(String[] args) {

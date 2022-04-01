@@ -11,56 +11,64 @@ uma lista. Após isso, o programa deve:
 
  */
 
+//FAZENDO...
+
 public class SegundaQuestao {
 
-    public static void main(String[] args) {
+    public static void imprime(int lista[]){
 
-        Scanner ler = new Scanner(System.in);
+        System.out.println("\n=== Imprimindo todos os arrays finais ===");
+        int i = 0;
+        while ( i < 10) {
 
-        int numeros[] = new int[10]; //Vetor de 10 posições
-        int numerosoma;
-        int soma;
+            System.out.println( lista[i] );
 
-        int cont = 0, i = 0;
+            i++;
+        }
 
+    }
+    public static void main (String[] args) {
+
+        Scanner leitor = new Scanner(System.in);
+
+        int lista1[] = new int[10];
+
+        int num = 0, i = 0;
 
         System.out.println("\n=== Lendo os números para o array===");
         while (i < 10) {
             System.out.println(" Digite um numero " + (i));
-            numeros[i] = ler.nextInt();
-            System.out.println((i + 1) + " elemento da lista:" + numeros[i]);
+            num = leitor.nextInt();
+            lista1[i] = num;
+            System.out.println((i + 1) + " elemento da lista:" + lista1[i]);
             i++;
-
-            System.out.println(numeros[i] + i);
         }
 
         System.out.println("\n=== Verificando e imprimindo os pares do array===");
         i = 0;
-        while (i < 10) {
+        while ( i < 10) {
 
-            if (numeros[i] % 2 == 0) {
+            if (lista1[i] %2 == 0){
 
-                System.out.println(numeros[i] + " é par!");
+                System.out.println(lista1[i] + " é par!");
             }
             i++;
         }
-
         System.out.println("\n=== Verificando, imprimindo e removendo os impares do array ===");
         i = 0;
-        while (i < 10) {
+        while ( i < 10) {
 
-            if (numeros[i] % 2 != 0) {
+            if(lista1[i] % 2 != 0){
 
-                System.out.println(numeros[i] + " é impar!");
-                numeros[i] = 0;
+                System.out.println(lista1[i] + " é impar!");
+                lista1[i] = 0;
             }
 
             i++;
 
         }
 
+        imprime(lista1);
+        leitor.close();
     }
 }
-
-
-

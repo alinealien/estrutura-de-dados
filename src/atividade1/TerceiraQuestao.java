@@ -12,6 +12,8 @@ package atividade1;
 por um.*/
 
 
+//FINALIZADA - POREM - REVISAR COM OS PROFESSORES
+
 import java.util.Stack;
 
 public class TerceiraQuestao {
