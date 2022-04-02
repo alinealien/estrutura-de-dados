@@ -1,5 +1,6 @@
 package atividade1;
 import java.util.*;
+import java.util.stream.IntStream;
 
 /*2.Desenvolva um algoritmo que leia 10 números inteiros e os armazene sequencialmente em
 uma lista. Após isso, o programa deve:
@@ -29,6 +30,22 @@ public class SegundaQuestao {
 
         }
     }
+
+    public static void soma(int numero[]) {
+        System.out.println("\n=== A soma de todos os numeros ===");
+
+        int sum = 0;
+
+        for (int i = 0; i < numero.length; i++) {
+            sum = sum + numero[i];
+
+        }
+
+        System.out.println(sum);
+
+
+    }
+
 
 
     public static void main(String[] args) {
@@ -72,14 +89,7 @@ public class SegundaQuestao {
             i++;
 
         }
-
-        System.out.println("\n=== A Soma dos numeros ===");
-
-        int sum, j;
-        for(sum= 0, j = numeros[i] - 1; 0 <= i; sum+= numeros[i--]);
-        System.out.println("Array Sum = "+ sum);
-
-
+            soma(numeros);
             imp(numeros);
             leitor.close();
         }
