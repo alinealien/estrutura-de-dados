@@ -15,6 +15,11 @@ uma lista. Após isso, o programa deve:
 
 public class SegundaQuestao {
 
+
+
+}
+
+    /*
     public static void imprime(int lista[]){
 
         System.out.println("\n=== Imprimindo todos os arrays finais ===");
@@ -71,4 +76,4 @@ public class SegundaQuestao {
         imprime(lista1);
         leitor.close();
     }
-}
+}*/
