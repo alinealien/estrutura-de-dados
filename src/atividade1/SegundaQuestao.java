@@ -16,64 +16,73 @@ uma lista. Após isso, o programa deve:
 public class SegundaQuestao {
 
 
-
-}
-
-    /*
-    public static void imprime(int lista[]){
-
-        System.out.println("\n=== Imprimindo todos os arrays finais ===");
+    public static void imp(int numero[]) {
+        System.out.println("\n=== Imprimindo todos numeros ===");
         int i = 0;
-        while ( i < 10) {
 
-            System.out.println( lista[i] );
+        while (i < 10) {
+
+            //System.out.println(numero[i]);
+            System.out.println("Todos os numeros: " + numero[i]);
 
             i++;
-        }
 
+        }
     }
-    public static void main (String[] args) {
+
+
+    public static void main(String[] args) {
 
         Scanner leitor = new Scanner(System.in);
 
-        int lista1[] = new int[10];
+        int numeros[] = new int[10];
 
         int num = 0, i = 0;
 
-        System.out.println("\n=== Lendo os números para o array===");
+        System.out.println("\n=== Lendo os 10 números inteiros ===");
         while (i < 10) {
-            System.out.println(" Digite um numero " + (i));
+            System.out.println(" Digite um numero : ");
             num = leitor.nextInt();
-            lista1[i] = num;
-            System.out.println((i + 1) + " elemento da lista:" + lista1[i]);
+            numeros[i] = num;
+
             i++;
         }
 
         System.out.println("\n=== Verificando e imprimindo os pares do array===");
         i = 0;
-        while ( i < 10) {
+        while (i < 10) {
 
-            if (lista1[i] %2 == 0){
+            if (numeros[i] % 2 == 0) {
 
-                System.out.println(lista1[i] + " é par!");
+                System.out.println(numeros[i] + " é par!");
             }
             i++;
         }
+
         System.out.println("\n=== Verificando, imprimindo e removendo os impares do array ===");
         i = 0;
-        while ( i < 10) {
+        while (i < 10) {
 
-            if(lista1[i] % 2 != 0){
+            if (numeros[i] % 2 != 0) {
 
-                System.out.println(lista1[i] + " é impar!");
-                lista1[i] = 0;
+                System.out.println(numeros[i] + " é impar!");
+                numeros[i] = 0;
             }
 
             i++;
 
         }
 
-        imprime(lista1);
-        leitor.close();
+        System.out.println("\n=== A Soma dos numeros ===");
+
+        int sum, j;
+        for(sum= 0, j = numeros[i] - 1; 0 <= i; sum+= numeros[i--]);
+        System.out.println("Array Sum = "+ sum);
+
+
+            imp(numeros);
+            leitor.close();
+        }
+
     }
-}*/
+

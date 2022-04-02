@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class TestePares {
 
+
         public static void imprime(int lista[]){
 
                 System.out.println("\n=== Imprimindo os arrays finais ===");
