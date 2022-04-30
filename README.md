@@ -2,6 +2,38 @@
 
 _______________________________________________________
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+_____________________________________________________________
+
+
+
+### ESTUDOS DO BOOTCAMP DE ESTRUTURA DE DADOS COM JAVA
+
 #### Estrutura de dados em Java - Introdução e Conceitos
 
 **Tipos de Memória:**
