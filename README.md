@@ -1,8 +1,39 @@
-### ESTUDOS - UFERSA -
+### REPOSITÓRIO DE ESTUDOS - UFERSA -
 
 _______________________________________________________
 
 
+
+#### ALGORITMOS E ESTRUTURA DE DADOS
+
+##### Conteúdos:
+
+##### Unidade I
+
+* **Introdução a Estrutura de dados:**
+  - Recursão
+  - Estrutura de dados heterogêneos (Registros)
+  - Lista Ligada
+* **Aplicações das Estruturas de Dados**:
+  - Pilha
+  - Fila
+  - Árvore Binária
+  - Técnicas de Ordenação
+
+##### Unidade II e III
+
+* **Técnicas de Estruturas de Dados:**
+  - Busca Sequencial
+  - Busca Binária
+  - **Análise de Algoritmos**
+    - Tipos de Complexidade
+    - Notação Matemática
+    - Escala de Medição
+  - **Introdução à Teoria dos Grafos**
+    -  Conceitos de Grafos
+    - Modelando Problemas
+    - Relação Grafo e Árvore
+    - Grafos no Cotidiano
 
 
 
