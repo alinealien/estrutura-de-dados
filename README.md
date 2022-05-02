@@ -97,9 +97,49 @@ hardwares cada vez mais potentes e dotados de capacidade de memória cada vez ma
   - Fila:  Uma fila é uma estrutura na qual colocamos os dados em uma ordem de forma que o primeiro a chegar é o primeiro a sair. Assim, em uma estrutura de fila o primeiro a entrar é o primeiro a sair, do inglês “First in first out” (FIFO).
     Esta estrutura permite o ordenamento de tarefas a ser executadas levando em consideração a ordem de chegada de cada tarefa. Esta estrutura se diferencia de uma pilha, onde o primeiro a entrar é o último a sair.
 
-  - Árvore Binária
+    - Operações em uma Fila:
 
-  - Técnicas de Ordenação
+      1. Criação de uma fila: Uma estrutura de uma fila pode ser criada sem elemento. Neste caso, a fila terá apenas o elemento inicial.
+      2. Inserção em uma fila: Um elemento só pode ser adicionado no topo de uma fila, ou seja, no fim da fila.
+      3. Remoção em uma fila: Só podemos remover o primeiro elemento de uma fila.
+      4. Estado de uma fila: Uma consulta para sabermos se a fila possui algum elemento ou está cheia.
+
+    - Importância das Filas: 
+
+      A fila é uma forma de organização de dados por meio de um critério de chegada, que pode ser implementado também em sistemas operacionais visando o controle do processamento de tarefas, se não houver restrição de tempo para os processos. Também podemos citar as filas de impressão, por meio das quais você pode enviar diversos documentos que são impressos segundo a ordem de chegada.
+
+      Também vemos o uso das filas para ordenar ações no computador. O maior exemplo disso talvez seja a ordem das teclas pressionadas e a forma como elas aparecem na sequência digitada em um editor de texto. Este evento fica claro quando o processador está com excesso de tarefas e “trava” o editor de texto, sendo que após as tarefas do processador serem executadas, as letras que estavam armazenadas em uma estrutura de fila serão mostradas de acordo com a sequência digitada.
+
+      A estrutura de fila também pode ser utilizada para simulações de uma situação real, como a própria fila de um banco ou uma fila em um engarrafamento de automóveis. Podemos simular diversos eventos com essa estrutura seguindo seus algoritmos.
+
+  - Árvore : Uma árvore é uma estrutura na qual os elementos têm uma origem, um elemento principal, denominado raiz ou pai (ou Nó Raiz), e a partir deste elemento principal outros elementos podem existir. Tais elementos são denominados filhos (ou folhas). A linha que liga os nós pai e filhos são chamados arestas ou arcos. Cada nó da
+    árvore poderá ter uma “sub-árvore” abaixo. Cada nó que possui arestas ligando-o a outros nós é o pai destes, que, por sua vez, são os filhos do pai. Quanto aos filhos, quando um nó está ao lado do outro são chamados de irmãos. Os nós filhos que não são pais são chamados nós terminais (ou folha). Desta forma, as árvores são estruturas ideais para a representação de estruturas hierárquicas, como, por exemplo, uma árvore genealógica de uma família. Outro exemplo prático de árvore é a estrutura de armazenamento em pastas adotada pelo sistema operacional, pois forma uma árvore hierárquica de pastas que podem ou não conter arquivos. Um detalhe interessante é que as árvores são recursivas, ou seja, primeiramente são avaliados os nós mais
+    distantes do pai até chegar ao pai. Assim, é comum representarmos equações matemática através das árvores, como, por exemplo, a expressão (14-10) * (3+5)+8. Uma árvore também pode ser vista como uma representação de conjuntos. Esta analogia de árvore como um conjunto deixa claro que para resolvermos um problema, devemos primeiramente resolver cada um dos problemas mais internos, ou seja, os subconjuntos.
+
+    - Ávore Binária:  Uma árvore é classificada como binária quando seus nós filhos só poderão ter no máximo dois outros nós filhos.
+    - Operações com Árvores Binárias:
+      1. Criar árvore: Criação de uma árvore vazia;
+      2. Inserir elementos: Insere elementos em uma árvore;
+      3. Excluir elementos: Exclui um elemento de uma árvore;
+      4. Status da árvore: Mostra a situação da árvore no momento;
+      5. Pesquisa elementos: Recupera valores em uma árvore;
+      6. Percorrer árvore: Percorre uma árvore.
+    - Inserção em uma ávore binária: Para inserirmos elementos em uma árvore binária, devemos observar as características desta árvore e seguir esta regra:
+      1. O primeiro elemento será o elemento raiz;
+      2. O segundo elemento será comparado ao elemento raiz. Caso o elemento seja menor do que o elemento raiz, será colocado à esquerda. Se o elemento for maior, será colocado à direita.
+      3. Caso o elemento seja igual ao elemento raiz, não será colocado na árvore.
+    - Remoção em uma árvore binária: Para removermos um elemento em uma árvore binária, precisamos obedecer sua estrutura. Nesse caso,
+      temos três tipos possíveis de remoção.
+      1. Remoção de um nó sem filhos: Neste caso, o ponteiro do pai que aponta para o filho que desejamos remover é preenchido com o valor “NULL”, excluindo o elemento filho da estrutura da árvore.
+      2. Remoção de um nó com um único filho: Modificamos o ponteiro do pai do nó que possui apenas um filho para o filho diretamente, excluindo o nó que possuía um filho, de modo que o filho ocupará o local do pai.
+      3. Remoção de um nó com dois filhos: Devemos procurar o sucessor, este será o nó descendente que está na “sub-árvore” à direita, o nó mais à esquerda desta. Se este não tiver filhos, poderá ser removido para qualquer lugar.
+    - Percorrer uma árvore binária: Percorrer uma árvore binária é importante no processo de busca de elementos na estrutura, onde cada nó
+      deve ser processado somente uma vez durante o procedimento. Para percorremos uma árvore, podemos usar uma das três estratégias:
+      1. Pré-ordem: A partir da raiz, percorremos todos os nós da esquerda e depois da direita;
+      2. Pós-ordem: Percorremos todos os nós da esquerda, depois da direita até a raiz;
+      3. In-ordem: Percorremos todos os nós da esquerda, raiz e direita.
+
+  - Técnicas de Ordenação: Os algoritmos de ordenação são técnicas que permitem ordenar um conjunto de dados seguindo um parâmetro. Apesar de existirem vários algoritmos de ordenação, apresentaremos apenas os algoritmos Bubblesort, Inserção, Shellsort, Quicksort e Heapsort. Cada um deles possui características que o torna mais ou menos eficiente, dependendo da situação na qual for aplicado. Um algoritmo pode ser considerado eficiente quando leva um tempo mínimo para cumprir a tarefa de ordenar um conjunto de dados.
 
 ##### Unidade II e III
 
