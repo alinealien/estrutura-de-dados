@@ -141,15 +141,55 @@ hardwares cada vez mais potentes e dotados de capacidade de memória cada vez ma
 
   - Técnicas de Ordenação: Os algoritmos de ordenação são técnicas que permitem ordenar um conjunto de dados seguindo um parâmetro. Apesar de existirem vários algoritmos de ordenação, apresentaremos apenas os algoritmos Bubblesort, Inserção, Shellsort, Quicksort e Heapsort. Cada um deles possui características que o torna mais ou menos eficiente, dependendo da situação na qual for aplicado. Um algoritmo pode ser considerado eficiente quando leva um tempo mínimo para cumprir a tarefa de ordenar um conjunto de dados.
 
+    - Técnicas de Ordenação: Bubblesort - Sua ideia principal é comparar um elemento a todos os outros de um conjunto, de modo que tal elemento ocupará um lugar de acordo com seu valor na estrutura do conjunto. Pelo método BubbleSort, o primeiro elemento deve ser comparado a todos os outros, trocando de valor sempre que este for maior que um número
+
+  - Técnicas de Ordenação: Inserção: A ordenação por inserção é o método mais simples e rápido dentre os métodos considerados básicos. Neste método, a ordenação é realizada por meio de divisões de conjuntos de elementos, onde um número é comparado a outro ou a um conjunto de números antes dele, alterando o subconjunto anterior conforme a ordenação desejada. Na prática, podemos dizer que o método seleciona um número para as comparações. Inicialmente, um número é comparado ao seu antecessor e, caso seja menor, ocupa o espaço do antecessor. Nesta primeira etapa, comparamos apenas dois números. Posteriormente, o conjunto de comparações será maior. A comparação agora é feita por um terceiro número, que é comparado ao segundo; caso este seja menor, troca de lugar com o segundo e deve ser comparado ao primeiro, que, novamente, caso seja menor, será trocado novamente. Assim, são realizadas as trocas e o conjunto é incrementado aos poucos até ter o tamanho do conjunto total.
+
+    - Constitui uma extensão do método de ordenação por inserção. Neste método, temos a divisão dos elementos em conjuntos e o decremento deste conjunto efetuando as trocas necessárias.
+      Podemos definir como será realizada a divisão inicial. É comum dividir inicialmente pela metade, usando um divisor dois, que será o passo, ou seja, uma vez comparados os elementos entre os passos e executadas as ordenações, o passo será aplicado novamente, subdividindo as comparações e criando novos subconjuntos
+
+  - Técnicas de Ordenação: Quicksort - Esta técnica é considerada a mais eficiente para a ordenação e em quase todos os casos ela é assim considerada
+    por dividir o conjunto a ser ordenado em subconjuntos, ordenados à parte para depois se juntar em um conjunto ordenado. Assim, esta técnica consiste em eleger um elemento e torná-lo pivô para as comparações, dividindo o vetor em subconjuntos esquerda e direita, de forma que os elementos inferiores ao pivô ficarão maisà esquerda dos elementos da esquerda do pivô e os elementos superiores ficarão mais à direita dos elementos da direita do pivô. O algoritmo termina quando os subconjuntos não tiverem mais do que dois elementos para comparação. Lembramos que a escolha do pivô pode ser aleatória. Poderia ser o primeiro ou último elementos e o método funcionaria da mesma forma.
+
+  - Técnicas de Ordenação: Heapsort - Esta estrutura de ordenação se baseia no uso de árvores do tipo “heap”, árvore binária completa que deve ter como características nós que não podem ter valores maiores que os pais e o elemento raiz como maior elemento. Assim, essa técnica consiste em simular uma estrutura que lembra a estrutura tipo árvore para ordenar os números. Esta técnica é bastante eficiente quando precisamos ordenar valores em tempo de execução. Desta forma, ao termos um arquivo com um conjunto de números, o primeiro passo é criar uma árvore
+    binária. Cada elemento do conjunto corresponderá a um nó na estrutura da árvore, que deve ser preenchida em todos os níveis, exceto os mais baixos, que serão preenchidos a partir da esquerda.
+
 ##### Unidade II e III
 
 * **Técnicas de Estruturas de Dados:**
-  - Busca Sequencial
-  - Busca Binária
+
+  - Busca: A problemática da busca se caracteriza por termos um conjunto contendo diversos elementos armazenados e desejamos buscar um elemento especial, um elemento “X”, que pode ou não estar presente no conjunto. Em uma pesquisa em uma estrutura simples contendo poucos elementos não requisita técnicas especiais, pois tal tarefa consumirá poucos recursos de processamento e memória. Porém, quando temos milhões de elementos armazenados em uma estrutura, uma busca a determinado elemento requer grande poder de processamento da máquina, consumindo seu processamento e memória. Assim, poder implementar
+    mecanismos eficientes de busca, que consumam poucos recursos.
+
+
+  - Busca Sequencial : A busca sequencial se caracteriza por percorrermos todos os elementos de uma estrutura em busca do elemento “X” desejado. Seja uma estrutura de vetor A [a1, a2...an], percorremos todo o vetor fazendo as comparações de A[N] = X. Caso a condição seja verdadeira, “X” existe na estrutura e a busca será concluída com sucesso.
+
+  - Busca Binária: Nesta classe de algoritmo de busca, a estrutura de dados deve estar organizada em determinada ordem a fim de que possamos dividir o algoritmo em duas partes, daí o nome busca binária. Assim, usamos a numeração crescente de ordenação.
+    Na técnica dividir para conquistar, o algoritmo é dividido sempre em duas partes para que possamos realizar as buscas na estrutura. A técnica consiste em comparar o número a ser pesquisado com o valor que está no meio, sabendo se é maior ou menor, e dividir o vetor em duas partes para trabalhar apenas a parte em que o número possa estar presente, descartando a outra.
+
   - **Análise de Algoritmos**
-    - Tipos de Complexidade
+
+    A análise de algoritmos é uma aferição da complexidade que um algoritmo pode ter. A complexidade de um algoritmo pode ser entendida como a quantidade de trabalho computacional necessária à sua completa execução. A aferição da complexidade de um algoritmo é importante para que possamos comparar um algoritmo a outro. 
+
+    - O que devemos analisar para concluir que um algoritmo é melhor do que outro? 
+
+      1. Tempo de processamento: Tempo que o algoritmo leva para ser executado;
+      2. Espaço de memória ocupada: Quantidade de memória requerida na execução do algoritmo;
+      3. Tamanho do código: Quantas linhas de programação um algoritmo possui.
+      4. Tolerância a falhas: Possibilidade de evitar erros de entradas e garantir o correto processamento do código para uma saída desejada.
+      5. Correta execução da função: Chegar a um valor desejado em tempo hábil.
+
+      Perceba que estes parâmetros são apenas alguns dentre vários que podem existir, pois as exigências dependerão da aplicação que desejamos realizar com o algoritmo, onde outros fatores podem ser exigidos de um algoritmo, como fatores relacionados à especificidade do hardware ou mesmo à interface que desejamos implementar. Em algoritmos para aplicações em tempo real, onde o tempo é determinante para que as tarefas sejam realizadas corretamente, o tempo de processamento tem de ser priorizado. Já em outros, como os celulares e aparelhos portáteis, a memória é o fator determinante.
+
+      Desta forma, é correto afirmar que a eficiência de um algoritmo é um dos atributos relacionados à qualidade de um software e que algoritmos mais eficientes, mais rápidos por consequência, terão melhor aceitação no mercado.
+
+
+    - Tipos de Complexidade:
+      1. Complexidade Espacial: Neste caso, os algoritmos são aferidos segundo o espaço de memória usado para sua execução.
+      2. Complexidade Temporal: Neste tipo, aferimos o tempo necessário à execução do algoritmo.
     - Notação Matemática
     - Escala de Medição
+
   - **Introdução à Teoria dos Grafos**
     -  Conceitos de Grafos
     -  Modelando Problemas
