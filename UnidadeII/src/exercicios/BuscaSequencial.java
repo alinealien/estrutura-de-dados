@@ -14,18 +14,20 @@ public class BuscaSequencial {
         System.out.println(Arrays.toString(v));
 
 
-
         System.out.println("Digite um numero para pesquisa:");
         int num = leitor.nextInt();
 
 
-       
+        for (int i = 0; i < v.length; i++) {
 
-                //if (num == v.length) {
-                    //System.out.println("Achei!");
-                }
+            if (v[i] == num) {
+                System.out.println("Achei!");
+            } else if (i == v.length-1){
+                System.out.println("Número não encontrado!");
+            }
 
-            //}
+        }
+    }
 
 
     public static void imprimir(int v){
