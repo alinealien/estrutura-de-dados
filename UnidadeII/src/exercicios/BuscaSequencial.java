@@ -18,12 +18,15 @@ public class BuscaSequencial {
         System.out.println("Digite um numero para pesquisa:");
         int num = leitor.nextInt();
 
-        if(num == 34){
-            System.out.println("Achei!");
-        }
 
+       
 
-    }
+                //if (num == v.length) {
+                    //System.out.println("Achei!");
+                }
+
+            //}
+
 
     public static void imprimir(int v){
         Scanner leitor = new Scanner(System.in);
