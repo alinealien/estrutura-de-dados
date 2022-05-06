@@ -28,19 +28,7 @@ public class BuscaSequencial {
 
         }
     }
-
-
-    public static void imprimir(int v){
-        Scanner leitor = new Scanner(System.in);
-
-        System.out.println("Digite um numero para pesquisa:");
-        int num = leitor.nextInt();
-
-        while(num == v){
-            System.out.println("Achei!");
-        }
-
-    }
+    
 
     public static int[] gerarVetor(int tamanho) {
         int[] vetor = new int[tamanho];
