@@ -6,30 +6,29 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class BuscaSequencial {
-
     public static void main(String[] args) {
-        Scanner leitor = new Scanner(System.in);
 
-        int[] v = gerarVetor(10);
-        System.out.println(Arrays.toString(v));
+    Scanner leitor = new Scanner(System.in);
 
-
-        System.out.println("Digite um numero para pesquisa:");
-        int num = leitor.nextInt();
+    int[] v = gerarVetor(10);
+    System.out.println(Arrays.toString(v));
 
 
-        for (int i = 0; i < v.length; i++) {
+    System.out.println("Digite um numero para pesquisa:");
+    int num = leitor.nextInt();
 
-            if (v[i] == num) {
-                System.out.println("Achei!");
-            } else if (i == v.length-1){
-                System.out.println("Número não encontrado!");
-            }
 
+    for(int i = 0; i < v.length;i++){
+        if (v[i] == num) {
+            System.out.println("Achei!");
+            break;
+        } else if (i == v.length - 1) {
+            System.out.println("Número não encontrado!");
         }
-    }
-    
 
+    }
+
+}
     public static int[] gerarVetor(int tamanho) {
         int[] vetor = new int[tamanho];
         Random gerador = new Random();
@@ -40,7 +39,6 @@ public class BuscaSequencial {
 
         return vetor;
     }
-
-
+    
 
 }
