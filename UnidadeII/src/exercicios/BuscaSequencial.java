@@ -1,6 +1,5 @@
 package exercicios;
 
-import java.io.ByteArrayInputStream;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -39,6 +38,6 @@ public class BuscaSequencial {
 
         return vetor;
     }
-    
+
 
 }
