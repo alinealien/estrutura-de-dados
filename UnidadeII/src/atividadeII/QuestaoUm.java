@@ -36,17 +36,16 @@ public class QuestaoUm {
         System.out.println("Digite um numero para pesquisa:");
         int num = leitor.nextInt();
 
-
-        int inicio = 0;         //Posição inicial do vetor.
-        int meio = 0;          //Posição do meio do vetor.
-        int fim = elementos.length - 1;  //Posição final do vetor.
+        //Posição inicial do vetor.
+        int inicio = 0;
+        //Posição do meio do vetor.
+        int meio = 0;
+        //Posição final do vetor.
+        int fim = elementos.length - 1;
 
         while (inicio <= fim) {
             meio = (fim + inicio) / 2;
-
-           // System.out.println("Inicio: " + elementos[inicio] + " - Meio: " + elementos[meio] + " - Fim: " + elementos[fim]);
-           // System.out.println("Inicio: " + inicio + " - Meio: " + meio + " - Fim: " + fim);
-
+            
             if (elementos[meio] == num) {
                 System.out.println("Encontrou o número " + num);
                 break;
