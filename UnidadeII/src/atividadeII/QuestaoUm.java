@@ -29,7 +29,8 @@ public class QuestaoUm {
 
 
         int[] elementos = {4, 137, -16, 43, 67, 81, -90, 212, 10, 75};
-        System.out.println(Arrays.toString(elementos)); //os elementos do array podem ser definidos assim? como objeto?
+        //os elementos do array podem ser definidos assim? como objeto?
+        System.out.println(Arrays.toString(elementos));
 
 
         //Aqui ele vai receber um numero para pesquisar no vetor
@@ -45,7 +46,7 @@ public class QuestaoUm {
 
         while (inicio <= fim) {
             meio = (fim + inicio) / 2;
-            
+
             if (elementos[meio] == num) {
                 System.out.println("Encontrou o número " + num);
                 break;
@@ -66,6 +67,7 @@ public class QuestaoUm {
 
 }
 
+       //BUSCA SEQUENCIAL
 
 
        /* Scanner leitor = new Scanner(System.in);
