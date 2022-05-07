@@ -15,8 +15,8 @@ public class BuscaSequencial {
 
 
     //Aqui ele vai receber um numero para pesquisar no vetor
-    System.out.println("Digite um numero para pesquisa:");
-    int num = leitor.nextInt();
+        System.out.println("Digite um numero para pesquisa:");
+        int num = leitor.nextInt();
 
 
     //Um laço para fazer a verificação se o numero pesquisado esta ou não no vetor

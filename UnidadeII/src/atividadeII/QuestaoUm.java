@@ -6,7 +6,7 @@ package atividadeII;
 ○ Crie um método em Java que realiza uma busca sequencial. OK
 ■ Entrada do método: valor de busca e/ou array. OK
 ■ Saída do método: se o valor de busca estiver no array, retorne a posição do elemento. Caso contrário, retornará -1. OK
-■ O método deve contar quantas comparações foram feitas.
+■ O método deve contar quantas comparações foram feitas. //FALTA NÃO ENTENDI
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 ● Implementação da busca binária:
 ○ Crie um método em Java que realiza uma busca binária.
@@ -17,17 +17,61 @@ do elemento. Caso contrário, retornará -1.
  */
 
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class QuestaoUm {
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         //BUSCA BINARIA
-
-        //BUSCA SEQUENCIAL
-
         Scanner leitor = new Scanner(System.in);
+
+
+        int[] elementos = {4, 137, -16, 43, 67, 81, -90, 212, 10, 75};
+        System.out.println(Arrays.toString(elementos)); //os elementos do array podem ser definidos assim? como objeto?
+
+
+        //Aqui ele vai receber um numero para pesquisar no vetor
+        System.out.println("Digite um numero para pesquisa:");
+        int num = leitor.nextInt();
+
+
+        int inicio = 0;         //Posição inicial do vetor.
+        int meio = 0;          //Posição do meio do vetor.
+        int fim = elementos.length - 1;  //Posição final do vetor.
+
+        while (inicio <= fim) {
+            meio = (fim + inicio) / 2;
+
+           // System.out.println("Inicio: " + elementos[inicio] + " - Meio: " + elementos[meio] + " - Fim: " + elementos[fim]);
+           // System.out.println("Inicio: " + inicio + " - Meio: " + meio + " - Fim: " + fim);
+
+            if (elementos[meio] == num) {
+                System.out.println("Encontrou o número " + num);
+                break;
+            }
+            if (elementos[meio] < num) {
+                inicio = meio + 1;
+            } else {
+                fim = meio - 1;
+            }
+        }
+        if (inicio > fim) {
+            System.out.println("Não encontrou o número " + num);
+
+
+        }
+
+    }
+
+}
+
+
+
+       /* Scanner leitor = new Scanner(System.in);
+
+
 
         int[] elementos = {4, 137, -16, 43, 67, 81, -90, 212, 10, 75}; //tentar colocar em uma linha só
 
@@ -50,7 +94,5 @@ public class QuestaoUm {
             }
 
         }
+  */
 
-
-    }
-}
