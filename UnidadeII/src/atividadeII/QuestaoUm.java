@@ -25,47 +25,48 @@ public class QuestaoUm {
     public static void main(String[] args) {
 
         //BUSCA BINARIA
-        Scanner leitor = new Scanner(System.in);
-
+        Scanner bin = new Scanner(System.in);
 
         int[] elementos = {4, 137, -16, 43, 67, 81, -90, 212, 10, 75};
         //os elementos do array podem ser definidos assim? como objeto?
         System.out.println(Arrays.toString(elementos));
 
-
         //Aqui ele vai receber um numero para pesquisar no vetor
         System.out.println("Digite um numero para pesquisa:");
-        int num = leitor.nextInt();
+        int num = bin.nextInt();
+
+            QuestaoUm.BuscaBinaria(num, elementos);
+
+            if (QuestaoUm.BuscaBinaria(num, elementos)) {
+                System.out.println(" *** O numero foi achado no metodo binario *** ");
+            }else
+                System.out.println(" *** O numero nao foi achado no metodo binario *** ");
+        }
+
+    public static boolean BuscaBinaria(int x, int elementos[]) {
 
         //Posição inicial do vetor.
         int inicio = 0;
         //Posição do meio do vetor.
-        int meio = 0;
+        int meio;
         //Posição final do vetor.
-        int fim = elementos.length - 1;
+        int fim = elementos.length -1;
 
         while (inicio <= fim) {
-            meio = (fim + inicio) / 2;
-
-            if (elementos[meio] == num) {
-                System.out.println("Encontrou o número " + num);
-                break;
-            }
-            if (elementos[meio] < num) {
-                inicio = meio + 1;
-            } else {
+            meio = (inicio + fim) / 2;
+            if (x == elementos[meio])
+                return true;
+            if (x < elementos[meio])
                 fim = meio - 1;
-            }
+            else
+                inicio = meio + 1;
         }
-        if (inicio > fim) {
-            System.out.println("Não encontrou o número " + num);
-
-
-        }
+        return false;
 
     }
 
 }
+
 
        //BUSCA SEQUENCIAL
 
@@ -90,7 +91,9 @@ public class QuestaoUm {
             if (elementos[i] == num) {
                 System.out.println("Achei " + num + " na posição " + i);
                 break;
-            } else if (i == elementos.length - 1) {
+            }
+            }
+             if (i == elementos.length) {
                 System.out.println("Número não encontrado!");
             }
 
