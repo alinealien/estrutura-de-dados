@@ -75,6 +75,8 @@ public class QuestaoUm {
 }
 
         //BUSCA SEQUENCIAL - FAZENDO -
+
+
        /* Scanner bin = new Scanner(System.in);
 
         int[] elementos = {4, 137, -16, 43, 67, 81, -90, 212, 10, 75};
