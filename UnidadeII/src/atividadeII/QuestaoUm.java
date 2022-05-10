@@ -25,41 +25,56 @@ public class QuestaoUm {
     public static void main(String[] args) {
 
         //BUSCA BINARIA
-        Scanner bin = new Scanner(System.in);
 
-        //inicio = 4 indice = 0 | meio = 67 indice = 4 | fim = 75 indice = 9
+        //Ordenação do vetor/array
         //inicio = -90 indice = 0 | meio = 43 indice = 4 | fim = 212 indice = 9
-        int[] elementos = {-90, -16, 4, 10, 43, 67, 81, 75, 137, 212};
+        int[] elementos = {-90, -16, 4, 10, 43, 67, 75, 81, 137, 212};
+
         //os elementos do array podem ser definidos assim? como objeto?
         System.out.println(Arrays.toString(elementos));
+
+        Scanner bin = new Scanner(System.in);
 
         //Aqui ele vai receber um numero para pesquisar no vetor
         System.out.println("Digite um numero para pesquisa:");
         int num = bin.nextInt();
 
+        int resultado = binario(elementos, num);
 
-        int indice = binario(elementos, num);
+        //VER UMA FORMA DE MELHORAR ISSO AQUI
+        if(resultado != -1) {
+            System.out.println(num + " encontrado na posição: " + resultado);
 
+        }else if (resultado == -1){
+            System.out.println( num + " Não encontrado / -1");
+        }
     }
 
-    private static int binario(int[] elementos, int x) {
-
-        int inicio = 74;
+    private static int binario(int[] elementos, int num) {
+        int inicio;
+        int fim;
         int meio;
-        int fim = elementos.length - 1;
+        inicio = 0;
+        fim = elementos.length - 1;
 
+        //Vai controlar o laço.
         while (inicio <= fim) {
             meio = (inicio + fim) / 2;
-            if (elementos[meio] == x) {
+            if (elementos[meio] == num)
                 return meio;
-            } else if (elementos[meio] < x) inicio = meio + 1;
-            else if (elementos[meio] > x) fim = meio - 1;
+
+            else if (elementos[meio] < num) inicio = meio + 1;
+
+            else if (elementos[meio] > num) fim = meio - 1;
+
         }
+
         return -1;
     }
+
 }
 
-
+        //BUSCA SEQUENCIAL - FAZENDO -
        /* Scanner bin = new Scanner(System.in);
 
         int[] elementos = {4, 137, -16, 43, 67, 81, -90, 212, 10, 75};
