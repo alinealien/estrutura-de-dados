@@ -45,7 +45,7 @@ public class BuscaBinaria {
 
         //VER UMA FORMA DE MELHORAR ISSO AQUI
         if(resultado != -1) {
-            System.out.println("Numero Encontrado na posição: " + resultado);
+            System.out.println(num + " foi encontrado na posição: " + resultado);
 
         }else if (resultado == -1){
                 System.out.println("Numero Não encontrado / -1");
