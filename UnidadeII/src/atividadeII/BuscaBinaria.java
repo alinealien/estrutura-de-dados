@@ -26,11 +26,7 @@ do elemento. Caso contrário, retornará -1.
 
 public class BuscaBinaria {
     public static void main(String[] args) {
-
         //BUSCA BINARIA
-        Scanner bin = new Scanner(System.in);
-
-        //inicio = 4 indice = 0 | meio = 67 indice = 4 | fim = 75 indice = 9
 
         //Ordenação do vetor/array
         //inicio = -90 indice = 0 | meio = 43 indice = 4 | fim = 212 indice = 9
@@ -39,27 +35,36 @@ public class BuscaBinaria {
         //os elementos do array podem ser definidos assim? como objeto?
         System.out.println(Arrays.toString(elementos));
 
+        Scanner bin = new Scanner(System.in);
+
         //Aqui ele vai receber um numero para pesquisar no vetor
         System.out.println("Digite um numero para pesquisa:");
         int num = bin.nextInt();
 
+        int indice = binario(elementos, num );
 
-        int indice = binario(elementos, num);
+        System.out.println("Achou! " + indice);
 
     }
 
-    private static int binario(int[] elementos, int x) {
-
-        int inicio = 74;
+    private static int binario(int[] elementos, int num) {
+        int inicio, fim;
         int meio;
-        int fim = elementos.length - 1;
+        inicio = 0;
+        fim = elementos.length - 1;
 
         while (inicio <= fim) {
             meio = (inicio + fim) / 2;
-            if (elementos[meio] == x) {
+            if (elementos[meio] == num)
                 return meio;
-            } else if (elementos[meio] < x) inicio = meio + 1;
-            else if (elementos[meio] > x) fim = meio - 1;
+
+            else if (elementos[meio] < num) inicio = meio + 1;
+
+            else if (elementos[meio] > meio) fim = meio - 1;
+
+            else if (num != meio || num != inicio || num != fim);
+
+
         }
         return -1;
     }
