@@ -48,7 +48,7 @@ public class BuscaBinaria {
             System.out.println(num + " encontrado na posição: " + resultado);
 
         }else if (resultado == -1){
-                System.out.println("Numero Não encontrado / -1");
+                System.out.println( num + " Não encontrado / -1");
             }
         }
 
