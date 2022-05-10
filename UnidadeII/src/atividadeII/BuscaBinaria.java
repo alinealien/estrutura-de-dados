@@ -30,7 +30,7 @@ public class BuscaBinaria {
 
         //Ordenação do vetor/array
         //inicio = -90 indice = 0 | meio = 43 indice = 4 | fim = 212 indice = 9
-        int[] elementos = {-90, -16, 4, 10, 43, 67, 81, 75, 137, 212};
+        int[] elementos = {-90, -16, 4, 10, 43, 67, 75, 81, 137, 212};
 
         //os elementos do array podem ser definidos assim? como objeto?
         System.out.println(Arrays.toString(elementos));
@@ -43,26 +43,23 @@ public class BuscaBinaria {
 
         int resultado = binario(elementos, num);
 
-        if(resultado > -1) {
-
+        //VER UMA FORMA DE MELHORAR ISSO AQUI
+        if(resultado != -1) {
             System.out.println("Numero Encontrado na posição: " + resultado);
 
-        }
-
-             else if (resultado == -1){
-                System.out.println("Numero Não encontrado");
-
-                
+        }else if (resultado == -1){
+                System.out.println("Numero Não encontrado / -1");
             }
         }
 
-
     private static int binario(int[] elementos, int num) {
-        int inicio, fim;
+        int inicio;
+        int fim;
         int meio;
         inicio = 0;
         fim = elementos.length - 1;
 
+        //Vai controlar o laço.
         while (inicio <= fim) {
             meio = (inicio + fim) / 2;
             if (elementos[meio] == num)
