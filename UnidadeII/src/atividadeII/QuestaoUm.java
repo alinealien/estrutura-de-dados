@@ -27,6 +27,41 @@ public class QuestaoUm {
         //BUSCA BINARIA
         Scanner bin = new Scanner(System.in);
 
+        //inicio = 4 indice = 0 | meio = 67 indice = 4 | fim = 75 indice = 9
+        //inicio = -90 indice = 0 | meio = 43 indice = 4 | fim = 212 indice = 9
+        int[] elementos = {-90, -16, 4, 10, 43, 67, 81, 75, 137, 212};
+        //os elementos do array podem ser definidos assim? como objeto?
+        System.out.println(Arrays.toString(elementos));
+
+        //Aqui ele vai receber um numero para pesquisar no vetor
+        System.out.println("Digite um numero para pesquisa:");
+        int num = bin.nextInt();
+
+
+        int indice = binario(elementos, num);
+
+    }
+
+    private static int binario(int[] elementos, int x) {
+
+        int inicio = 74;
+        int meio;
+        int fim = elementos.length - 1;
+
+        while (inicio <= fim) {
+            meio = (inicio + fim) / 2;
+            if (elementos[meio] == x) {
+                return meio;
+            } else if (elementos[meio] < x) inicio = meio + 1;
+            else if (elementos[meio] > x) fim = meio - 1;
+        }
+        return -1;
+    }
+}
+
+
+       /* Scanner bin = new Scanner(System.in);
+
         int[] elementos = {4, 137, -16, 43, 67, 81, -90, 212, 10, 75};
         //os elementos do array podem ser definidos assim? como objeto?
         System.out.println(Arrays.toString(elementos));
