@@ -41,11 +41,21 @@ public class BuscaBinaria {
         System.out.println("Digite um numero para pesquisa:");
         int num = bin.nextInt();
 
-        int indice = binario(elementos, num );
+        int resultado = binario(elementos, num);
 
-        System.out.println("Achou! " + indice);
+        if(resultado > -1) {
 
-    }
+            System.out.println("Numero Encontrado na posição: " + resultado);
+
+        }
+
+             else if (resultado == -1){
+                System.out.println("Numero Não encontrado");
+
+                
+            }
+        }
+
 
     private static int binario(int[] elementos, int num) {
         int inicio, fim;
@@ -60,12 +70,10 @@ public class BuscaBinaria {
 
             else if (elementos[meio] < num) inicio = meio + 1;
 
-            else if (elementos[meio] > meio) fim = meio - 1;
-
-            else if (num != meio || num != inicio || num != fim);
-
+            else if (elementos[meio] > num) fim = meio - 1;
 
         }
+
         return -1;
     }
 
