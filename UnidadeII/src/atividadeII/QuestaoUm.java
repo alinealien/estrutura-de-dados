@@ -74,7 +74,7 @@ public class QuestaoUm {
 
 }
 
-        //BUSCA SEQUENCIAL - FAZENDO -
+        //BUSCA BINARIA - FAZENDO -
 
 
        /* Scanner bin = new Scanner(System.in);
