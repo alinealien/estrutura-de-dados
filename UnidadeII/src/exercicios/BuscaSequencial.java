@@ -25,15 +25,6 @@ public class BuscaSequencial {
         int[] v = gerarVetor(10);
         System.out.println(Arrays.toString(v) + " ");
 
-        //Bubble Sort - TESTE
-
-        BuscaSequencial bs = new BuscaSequencial();
-        bs.ordenar(v);
-        for(int numero : v) {
-            System.out.println(numero + " ");
-        }
-
-
 
         //Aqui ele vai receber um numero para pesquisar no vetor
         System.out.println("Digite um numero para pesquisa:");
@@ -53,6 +44,13 @@ public class BuscaSequencial {
         if (i == v.length) {
             System.out.println("Número não encontrado!");
 
+        }
+        //Bubble Sort - TESTE
+
+        BuscaSequencial bs = new BuscaSequencial();
+        bs.ordenar(v);
+        for (int numero : v) {
+            System.out.print(numero + " ");
         }
 
     }
