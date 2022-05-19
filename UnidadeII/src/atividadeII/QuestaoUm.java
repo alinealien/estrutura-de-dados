@@ -24,7 +24,42 @@ public class QuestaoUm {
 
     public static void main(String[] args) {
 
-        //BUSCA BINARIA
+        //BUSCA SEQUENCIAL
+
+        Scanner leitor = new Scanner(System.in);
+
+        //64, 137, -16, 43, 67, 81, -90, 212, 10, 75
+        int[] elementos = {64, 137, -16, 43, 67, 81, -90, 212, 10, 75};
+        System.out.println(Arrays.toString(elementos));
+
+        //Aqui ele vai receber um numero para pesquisar no vetor
+        System.out.println("Digite um numero para pesquisa:");
+        int num = leitor.nextInt();
+
+
+        //Um laço para fazer a verificação se o numero pesquisado esta ou não no vetor
+        int i;
+        for (i = 0; i < elementos.length; i++) {
+            if (elementos[i] == num) {
+                System.out.println("Achei " + num + " na posição " + i);
+
+                break;
+            }
+
+        }
+        //O método deve contar quantas comparações foram feitas.
+
+
+        if (i == elementos.length) {
+            System.out.println("Número " + num + " não encontrado!");
+        }
+
+    }
+
+}
+
+
+        /*//BUSCA BINARIA
 
         //Ordenação do vetor/array
         //inicio = -90 indice = 0 | meio = 43 indice = 4 | fim = 212 indice = 9
@@ -151,4 +186,3 @@ public class QuestaoUm {
 
         }
   */
-

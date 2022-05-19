@@ -18,7 +18,7 @@ e a busca será concluída com sucesso.
 *1. Considere um array de 10 elementos do tipo inteiro:
 Os elementos são {64, 137, -16, 43, 67, 81, -90, 212, 10, 75}.
 ● Implemente uma classe em Java que aloque e carregue esses elementos em um array. OK
-●  Implementação da busca sequencial:
+● Implementação da busca sequencial:
 ○ Crie um método em Java que realiza uma busca sequencial. OK
 ■ Entrada do método: valor de busca e/ou array. OK
 ■ Saída do método: se o valor de busca estiver no array, retorne a posição do elemento.
@@ -36,12 +36,11 @@ public class BuscaSequencial {
 
     public static void main(String[] args) {
 
-
         Scanner leitor = new Scanner(System.in);
 
-        int[] elementos = {4, 137, -16, 43, 67, 81, -90, 212, 10, 75}; //tentar colocar em uma linha só
+        //64, 137, -16, 43, 67, 81, -90, 212, 10, 75
+        int[] elementos = {64, 137, -16, 43, 67, 81, -90, 212, 10, 75};
         System.out.println(Arrays.toString(elementos));
-
 
         //Aqui ele vai receber um numero para pesquisar no vetor
         System.out.println("Digite um numero para pesquisa:");
@@ -49,16 +48,22 @@ public class BuscaSequencial {
 
 
         //Um laço para fazer a verificação se o numero pesquisado esta ou não no vetor
-        for (int i = 0; i < elementos.length; i++) {
+        int i;
+        for (i = 0; i < elementos.length; i++) {
             if (elementos[i] == num) {
                 System.out.println("Achei " + num + " na posição " + i);
+
                 break;
             }
-        }
 
-        if (i == elementos.length) {
-            System.out.println("Número não encontrado!");
         }
+            //O método deve contar quantas comparações foram feitas.
 
+
+            if (i == elementos.length) {
+                System.out.println("Número " + num + " não encontrado!");
+            }
+
+        }
     }
-}
+

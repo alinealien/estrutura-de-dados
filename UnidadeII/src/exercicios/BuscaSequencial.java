@@ -31,6 +31,7 @@ public class BuscaSequencial {
         int num = leitor.nextInt();
 
 
+
         //Um laço para fazer a verificação se o numero pesquisado esta ou não no vetor
         int i;
         for (i = 0; i < v.length; i++) {
