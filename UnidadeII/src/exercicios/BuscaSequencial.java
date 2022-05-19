@@ -23,13 +23,21 @@ public class BuscaSequencial {
 
         //Aqui ele mostra o vetor com 10 numeros aleatorios
         int[] v = gerarVetor(10);
-        System.out.println(Arrays.toString(v));
+        System.out.println(Arrays.toString(v) + " ");
+
+        //Bubble Sort - TESTE
+
+        BuscaSequencial bs = new BuscaSequencial();
+        bs.ordenar(v);
+        for(int numero : v) {
+            System.out.println(numero + " ");
+        }
+
 
 
         //Aqui ele vai receber um numero para pesquisar no vetor
         System.out.println("Digite um numero para pesquisa:");
         int num = leitor.nextInt();
-
 
 
         //Um laço para fazer a verificação se o numero pesquisado esta ou não no vetor
@@ -48,6 +56,25 @@ public class BuscaSequencial {
         }
 
     }
+
+
+    public void ordenar(int[] elementos) {
+
+        for (int i = 0; i < elementos.length - 1; i++) {
+            for (int j = 0; j < elementos.length - 1 - i; j++) {
+
+                if (elementos[j] > elementos[j + 1]) {
+                    int aux = elementos[j];
+                    elementos[j] = elementos[j + 1];
+                    elementos[j + 1] = aux;
+
+                }
+
+            }
+        }
+    }
+
+
    //Metodo para gerar os vetores aleatorios
     public static int[] gerarVetor(int tamanho) {
         int[] vetor = new int[tamanho];
