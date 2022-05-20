@@ -5,54 +5,67 @@ package atividadeII;
 esse array com entrada, ordene seus elementos e imprima o resultado.
 ● Implemente uma classe em Java que aloque e carregue esses elementos em um array.
 ● Crie um método para executar o algoritmo bubblesort:
-○ Entrada do método: array desordenado.
-○ Saída do método: array ordenado
+○ Entrada do método: array desordenado. OK
+○ Saída do método: array ordenado OK
  */
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 //BubbleSort
 public class QuestaoDois {
 
-    //Bubble Sort - II
     public static void main(String[] args) {
 
         int elementos[] = {64, 137, -16, 43, 67, 81, -90, 212, 10, 75};
 
-        QuestaoDois bs = new QuestaoDois();
-        bs.ordenar(elementos);
+        //Elementos Desosdenados
+        System.out.println("ELEMENTOS DESORDENADOS");
+        for(int i=0;i<elementos.length;i++)
+        {
+            System.out.print(elementos[i] + " | ");
+        }
+
+        System.out.println("\n____________________________________________________");
+        System.out.println("ELEMENTOS ORDENADOS PELO BUBBLE SORT");
+
+
+        QuestaoDois bubblesort = new QuestaoDois();
+        bubblesort.ordenar(elementos);
 
          for (int numero : elementos) {
-           System.out.println(numero + " ");
+           System.out.print(numero + " | ");
         }
 
     }
 
      public void ordenar(int[] elementos) {
 
-     //for utilizado para controlar a quantidade de vezes que o vetor será ordenado.
+     //aqui o for é utilizado para controlar a quantidade de vezes que o vetor será ordenado.
     for(int i = 0; i < elementos.length - 1; i++) {
 
     // Variavel utilizada para controlar se o vetor ja está ordenado.
-    boolean arrayOrdenado = true;
+    boolean bubblesortOrdenado = true;
 
     // for utilizado para ordenar o vetor.
     for(int j = 0; j < elementos.length - 1 - i; j++) {
 
     // Se o valor da posição atual do vetor for maior que o proximo valor então troca os valores de lugar no vetor.
     if(elementos[j] > elementos[j + 1]) {
-    int aux = elementos[j];
+    int bbs = elementos[j];
     elementos[j] = elementos[j + 1];
-    elementos[j + 1] = aux;
-    arrayOrdenado = false;
+    elementos[j + 1] = bbs;
+    bubblesortOrdenado = false;
     }
     }
         // Se o vetor está ordenado então para as iterações sobre ele.
-    if(arrayOrdenado)
+    if(bubblesortOrdenado)
     break;
     }
 }
 }
+
+     // OUTRA FORMA DE FAZER UM BUBBLE SORT
 
     /*
     public static void main(String[] args) {

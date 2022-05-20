@@ -24,6 +24,7 @@ Os elementos são {64, 137, -16, 43, 67, 81, -90, 212, 10, 75}.
 do elemento. Caso contrário, retornará -1.
  */
 
+
 public class BuscaBinaria {
     public static void main(String[] args) {
         //BUSCA BINARIA
