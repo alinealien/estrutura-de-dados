@@ -30,7 +30,7 @@ public class BuscaBinaria {
 
         //Ordenação do vetor/array
         //inicio = -90 indice = 0 | meio = 43 indice = 4 | fim = 212 indice = 9
-        int[] elementos = {-90, -16, 4, 10, 43, 67, 75, 81, 137, 212};
+        int[] elementos = {-90, -16, 64, 10, 43, 67, 75, 81, 137, 212};
 
         //os elementos do array podem ser definidos assim? como objeto?
         System.out.println(Arrays.toString(elementos));

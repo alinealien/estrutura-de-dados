@@ -1,8 +1,21 @@
 package atividadeII;
 
+/*
+//{64, 137, -16, 43, 67, 81, -90, 212, 10, 75};
+
+2. Considere o mesmo array da questão 1. Desenvolva um programa em Java que receba
+esse array com entrada, ordene seus elementos e imprima o resultado.
+● Implemente uma classe em Java que aloque e carregue esses elementos em um array.
+● Crie um método para executar o algoritmo bubblesort:
+○ Entrada do método: array desordenado.
+○ Saída do método: array ordenado
+ */
+
+
 public class BubbleSort {
     //Static = variavel de classe - Global - todas as instancias geradas pelo BubbleSort teram visão global das variaveis.
     //Os metodos poderam acessar as variaves sem passar por parametro
+    //final quer dizer que a variavel tamanho não pode assumir outro valor (constante)
 
     //variavel de tamanho
     static final int tamanho = 10;
@@ -12,11 +25,17 @@ public class BubbleSort {
 
     private static int temporaria;
 
-    public static void main(String[] Args) {
+    public static void imprime() {
+        for (int y = 0; y < tamanho; y++) {
+            System.out.print(elementos[y] + " | ");
+        }
 
+    }
+
+    public static void inicializa(){
         int temporaria = 0;
 
-        //int elementos[] = {64, 137, -16, 43, 67, 81, -90, 212, 10, 75};
+        //{64, 137, -16, 43, 67, 81, -90, 212, 10, 75};
 
         //x / elementos neste caso é uma variavel de classe
         //Carga inicial do vetor
@@ -31,14 +50,17 @@ public class BubbleSort {
         elementos[8] = 10;
         elementos[9] = 75;
 
+    }
+    public static void main(String[] Args) {
 
-        //final quer dizer que a variavel tamanho não pode assumir outro valor (constante)
+        inicializa();
 
         //Laço - tamanho é uma variavel estatica de classe
         System.out.println("\nVetor Desordenado");
-        for (int y = 0; y < tamanho; y++) {
-            System.out.print(elementos[y] + " | ");
-        }
+        imprime();
+        //for (int y = 0; y < tamanho; y++) {
+            //System.out.print(elementos[y] + " | ");
+        //}
 
         System.out.println();
 
@@ -46,27 +68,30 @@ public class BubbleSort {
             System.out.println((a+1) + " a iteração:\n");
 
             for (int b = 0; b < tamanho - 1; b++) {
+
                 if (elementos[b] > elementos[b + 1]) {
 
                     temporaria = elementos[b];
                     elementos[b] = elementos[b + 1];
                     elementos[b + 1] = temporaria;
 
-
-                    System.out.println("Ocorreu uma troca: um novo vetor: ");
-                    for (int y = 0; y < tamanho; y++) {
+                    System.out.println("Troca de valores nas posições " + b + " e " +(b+1));
+                    System.out.println("Novo vetor: ");
+                    imprime();
+                    System.out.println("\n");
+                    /*for (int y = 0; y < tamanho; y++) {
                         System.out.print(elementos[y] + " | ");
                     }
-
-                    System.out.println();
-
+                    System.out.println("\n");*/
                 }
 
             }
+
         }
         System.out.println("Vetor Final: impressão dos dados ordenados: ");
-        for(int y = 0; y < tamanho; y++){
+        imprime();
+        /*for(int y = 0; y < tamanho; y++){
             System.out.print(elementos[y] + " | ");
-        }
+        }*/
     }
 }
