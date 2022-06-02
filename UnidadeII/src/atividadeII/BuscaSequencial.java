@@ -59,7 +59,6 @@ public class BuscaSequencial {
         }
             //O método deve contar quantas comparações foram feitas.
 
-
             if (i == elementos.length) {
                 System.out.println("Número " + num + " não encontrado!");
             }
