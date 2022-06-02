@@ -2,11 +2,10 @@ package arvore;
 
 public class No {
 
-    Integer chave; //Pode passar por referencia com o Integer
+    public Integer chave; //Pode passar por referencia com o Integer
     String valor;
-    No esq, dir;
-
-
+    public No esq;
+    public No dir;
 
     public No(Integer c, String v, No e, No d){
         chave = c;

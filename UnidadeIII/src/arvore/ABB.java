@@ -33,15 +33,15 @@ public class ABB {
         return arv;
     }
 
-    public  No buscar(No arv, Integer chave){
+    public  No buscar(No arv,   Integer chave , String valor){
         if(arv == null)
         return null;
 
         if(chave < arv.chave)
-            return buscar(arv.esq, chave);
+            return buscar(arv.esq, chave, valor);
 
         else if (chave > arv.chave)
-            return buscar(arv.dir, chave);
+            return buscar(arv.dir, chave, valor);
 
         else
 
