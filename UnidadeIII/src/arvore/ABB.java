@@ -3,6 +3,14 @@ package arvore;
 public class ABB {
     No raiz; //no principal da arvore
 
+    public void preordem(No arv){
+        if(arv != null){
+            System.out.print(arv.chave + " ");
+            preordem(arv.esq);
+            preordem(arv.dir);
+
+        }
+    }
 
     //operacao d insercao
     public No inserir (No arv, Integer chave, String valor){
@@ -25,10 +33,18 @@ public class ABB {
         return arv;
     }
 
-    public  No buscar(No arv, Integer chave, String valor){
+    public  No buscar(No arv, Integer chave){
         if(arv == null)
         return null;
 
-        if()
+        if(chave < arv.chave)
+            return buscar(arv.esq, chave);
+
+        else if (chave > arv.chave)
+            return buscar(arv.dir, chave);
+
+        else
+
+        return arv;
     }
 }

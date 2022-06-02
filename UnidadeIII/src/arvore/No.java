@@ -6,6 +6,8 @@ public class No {
     String valor;
     No esq, dir;
 
+
+
     public No(Integer c, String v, No e, No d){
         chave = c;
         valor = v;
@@ -15,4 +17,7 @@ public class No {
 
 
     }
+
+
+
 }
