@@ -51,15 +51,8 @@ public class TestaABB {
         Integer produto = busca.nextInt();
 
 
-        /*// ISSO AQUI TA SUPER ERRADO - DESCONSIDERE KKKKK
-        No dados = ab.buscar(a1, 1, "Banana", ab.buscar(a2, 2, "Maçã", ab.buscar(a3, 3, "Pera", ab.buscar(a4, 4, "Uva", ab.buscar(a5, 5, "Melancia",
-        ab.buscar(a6, 6, "Batata", ab.buscar(a7, 7, "Cenoura", ab.buscar(a8, 8, "Beterraba",
-                ab.buscar(a9, 9, "Manga", ab.buscar(a10, 10, "Chocolate",
-                ab.buscar(e11, 11, "TV", ab.buscar(e12, 12, " Geladeira", ab.buscar(e13, 13, " Fogão",
-                ab.buscar(e14, 14, " Liquidificador",
-                ab.buscar(e15, 15, " Ventilador", ab.buscar(l16, 16, "Dtergente", ab.buscar(l17, 17, " Agia Sanitaria",
-                ab.buscar(l18, 18, "Sabão em Pó", ab.buscar(l19, 19, " Desinfetante",
-                ab.buscar(l20, 20, " Amaciante"))))))))))))))))))));*/
+        // ISSO AQUI TA SUPER ERRADO - DESCONSIDERE KKKKK
+        
 
 
 
@@ -190,13 +183,6 @@ public class TestaABB {
 
 
          */
-
-
-
-
-
-
-
 
 
 
