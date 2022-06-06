@@ -8,51 +8,61 @@ public class TestaABB {
 
         System.out.println("------------------- TESTE I -------------------");
 
-        No a1 = new No(1, "Banana", null, null);
-        No a2 = new No(2, "Maçã", a1, null);
-        No a3 = new No(3, "Pera", a2, null);
-        No a4 = new No(4, "Uva", a3, null);
-        No a5 = new No(5, "Melancia", a4, null);
-        No a6 = new No(6, "Batata", a5, null);
-        No a7 = new No(7, "Cenoura", a6, null);
-        No a8 = new No(8, "Beteraba", a7, null);
-        No a9 = new No(9, "Manga", a8, null);
-        No a10 = new No(10, "Chocolate", a9, null);
+        ABB arvore = new ABB();
 
-        No e11 = new No(11, "TV", a10, null);
-        No e12 = new No(12, "Geladeira", e11, null);
-        No e13 = new No(13, "Fogão", e12, null);
-        No e14 = new No(14, "Liquidificador", e13, null);
-        No e15 = new No(15, "Ventilador", e14, null);
+        //arvore.raiz = arvore.inserir(null, 0, "Produtos");
 
+        //Dez alimentos;
+        arvore.raiz = arvore.inserir(arvore.raiz, 1, "Banana");
+        arvore.inserir(arvore.raiz, 2, "Maçã");
+        arvore.inserir(arvore.raiz, 3, "Uva");
+        arvore.inserir(arvore.raiz, 4, "Feijão");
+        arvore.inserir(arvore.raiz, 5, "Arroz");
+        arvore.inserir(arvore.raiz, 6, "Cuscus");
+        arvore.inserir(arvore.raiz, 7, "Queijo");
+        arvore.inserir(arvore.raiz, 8, "Cenoura");
+        arvore.inserir(arvore.raiz, 9, "Batata");
+        arvore.inserir(arvore.raiz, 10,"Chocolate");
 
-        No l16 = new No(16, "Detergente", e15, null);
-        No l17 = new No(17, "Agua Sanitaria", l16, null);
-        No l18 = new No(18, "Sabão em pó", l17, null);
-        No l19 = new No(19, "Desinfetante", l18, null);
-        No l20 = new No(20, "Amaciante", l19, null);
+        //Cinco Eletrodomesticos
+        arvore.inserir(arvore.raiz, 11, "Notebook");
+        arvore.inserir(arvore.raiz, 12, "Televisão");
+        arvore.inserir(arvore.raiz, 13, "Geladeira");
+        arvore.inserir(arvore.raiz, 14, "Batedeira");
+        arvore.inserir(arvore.raiz, 15, "Ventilador");
 
-        System.out.println("PRODUTOS");
+        //Cinco Produtos de limpeza
+        arvore.inserir(arvore.raiz, 16, "Banana");
+        arvore.inserir(arvore.raiz, 17, "Maçã");
+        arvore.inserir(arvore.raiz, 18, "Uva");
+        arvore.inserir(arvore.raiz, 19, "Feijão");
+        arvore.inserir(arvore.raiz, 20, "Arroz");
 
-        ABB ab = new ABB(l20);
+        arvore.preordem(arvore.raiz);
 
-        ab.raiz = l20;
+        //COM O METODO BUSCAR
+        /*arvore.buscar(arvore.raiz, 10, "Chocolate");
+        arvore.buscar(arvore.raiz, 9, "Batata");
+        arvore.buscar(arvore.raiz, 8, "Cenoura");
+        arvore.buscar(arvore.raiz, 7, "Queijo");
+        arvore.buscar(arvore.raiz, 6, "Cuscus");*/
 
-        //ab.preordem(ab.raiz);
-
-        ab.ordem(ab.raiz);
 
         System.out.println("-----------------------------------------------");
 
         Scanner busca = new Scanner(System.in);
 
-
         System.out.println("Digite um produto para pesquisa:");
-        String produto = busca.nextLine();
+        //Integer produto = busca.nextInt();
+        String  produto = busca.nextLine();
 
+       // int numS = Integer.parseInt(produto);
 
-        // ISSO AQUI TA SUPER ERRADO - DESCONSIDERE KKKKK
-
+        if(produto == arvore.raiz.getValor()){
+            System.out.println("Produto encontrado" + " " + arvore.raiz.getValor());
+        } else {
+            System.out.println("Produto não encontrado" + " " + produto);
+        }
 
 
 
@@ -154,10 +164,6 @@ public class TestaABB {
             System.out.println("\n\n***Chave Encontada: " + a2.valor);
         else
             System.out.println("\n\n***Chave Não Encontada " );
-
-
-
-
 
 
                No no = new No(1, "Banana",

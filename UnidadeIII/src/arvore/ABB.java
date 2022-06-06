@@ -1,12 +1,10 @@
 package arvore;
 
-import java.util.Scanner;
-
 public class ABB {
 
     No raiz; //no principal da arvore
 
-    public ABB(No l20) {
+    public ABB() {
 
     }
 
@@ -48,6 +46,8 @@ public class ABB {
 
     //Operacao de Busca
     public No buscar(No arv, Integer chave, String valor) {
+
+        int NumConv = Integer.parseInt(valor);
 
         if (arv == null )
             return null;

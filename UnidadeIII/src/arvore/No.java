@@ -2,7 +2,7 @@ package arvore;
 
 public class No {
     public Integer chave;
-    String valor;
+    public String valor;
     public No esq;
     public No dir;
 
