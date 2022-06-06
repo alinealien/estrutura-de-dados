@@ -41,11 +41,16 @@ public class TestaABB {
         arvore.preordem(arvore.raiz);
 
         //COM O METODO BUSCAR
-        /*arvore.buscar(arvore.raiz, 10, "Chocolate");
-        arvore.buscar(arvore.raiz, 9, "Batata");
-        arvore.buscar(arvore.raiz, 8, "Cenoura");
+        arvore.buscar(arvore.raiz, 1, "Banana");
+        arvore.buscar(arvore.raiz, 2, "Maçã");
+        arvore.buscar(arvore.raiz, 3, "Uva");
+        arvore.buscar(arvore.raiz, 4, "Feijão");
+        arvore.buscar(arvore.raiz, 5, "Arroz");
+        arvore.buscar(arvore.raiz, 6, "Cuscus");
         arvore.buscar(arvore.raiz, 7, "Queijo");
-        arvore.buscar(arvore.raiz, 6, "Cuscus");*/
+        arvore.buscar(arvore.raiz, 8, "Cenoura");
+        arvore.buscar(arvore.raiz, 9, "Batata");
+        arvore.buscar(arvore.raiz, 10,"Chocolate");
 
 
         System.out.println("-----------------------------------------------");
@@ -54,7 +59,7 @@ public class TestaABB {
 
         System.out.println("Digite um produto para pesquisa:");
         //Integer produto = busca.nextInt();
-        String  produto = busca.nextLine();
+        String produto = busca.nextLine();
 
        // int numS = Integer.parseInt(produto);
 
