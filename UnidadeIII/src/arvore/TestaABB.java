@@ -48,11 +48,11 @@ public class TestaABB {
 
 
         System.out.println("Digite um produto para pesquisa:");
-        Integer produto = busca.nextInt();
+        String produto = busca.nextLine();
 
 
         // ISSO AQUI TA SUPER ERRADO - DESCONSIDERE KKKKK
-        
+
 
 
 
