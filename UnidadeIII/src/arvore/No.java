@@ -1,8 +1,7 @@
 package arvore;
 
 public class No {
-
-    public Integer chave; //Pode passar por referencia com o Integer
+    public Integer chave;
     String valor;
     public No esq;
     public No dir;
@@ -13,9 +12,25 @@ public class No {
         esq = e;
         dir = d;
 
-
-
     }
+
+
+    public Integer getChave() {
+        return chave;
+    }
+
+    public void setChave(Integer chave) {
+        this.chave = chave;
+    }
+
+    public String getValor() {
+        return valor;
+    }
+
+    public void setValor(String valor) {
+        this.valor = valor;
+    }
+
 
 
 

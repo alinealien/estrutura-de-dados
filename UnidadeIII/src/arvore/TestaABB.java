@@ -1,10 +1,208 @@
 package arvore;
 
+import java.util.Scanner;
+
 public class TestaABB {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
+        System.out.println("------------------- TESTE I -------------------");
+
+        No a1 = new No(1, "Banana", null, null);
+        No a2 = new No(2, "Maçã", a1, null);
+        No a3 = new No(3, "Pera", a2, null);
+        No a4 = new No(4, "Uva", a3, null);
+        No a5 = new No(5, "Melancia", a4, null);
+        No a6 = new No(6, "Batata", a5, null);
+        No a7 = new No(7, "Cenoura", a6, null);
+        No a8 = new No(8, "Beteraba", a7, null);
+        No a9 = new No(9, "Manga", a8, null);
+        No a10 = new No(10, "Chocolate", a9, null);
+
+        No e11 = new No(11, "TV", a10, null);
+        No e12 = new No(12, "Geladeira", e11, null);
+        No e13 = new No(13, "Fogão", e12, null);
+        No e14 = new No(14, "Liquidificador", e13, null);
+        No e15 = new No(15, "Ventilador", e14, null);
+
+
+        No l16 = new No(16, "Detergente", e15, null);
+        No l17 = new No(17, "Agua Sanitaria", l16, null);
+        No l18 = new No(18, "Sabão em pó", l17, null);
+        No l19 = new No(19, "Desinfetante", l18, null);
+        No l20 = new No(20, "Amaciante", l19, null);
+
+        System.out.println("PRODUTOS");
+
+        ABB ab = new ABB(l20);
+
+        ab.raiz = l20;
+
+        //ab.preordem(ab.raiz);
+
+        ab.ordem(ab.raiz);
+
+        System.out.println("-----------------------------------------------");
+
+        Scanner busca = new Scanner(System.in);
+
+
+        System.out.println("Digite um produto para pesquisa:");
+        Integer produto = busca.nextInt();
+
+
+        /*// ISSO AQUI TA SUPER ERRADO - DESCONSIDERE KKKKK
+        No dados = ab.buscar(a1, 1, "Banana", ab.buscar(a2, 2, "Maçã", ab.buscar(a3, 3, "Pera", ab.buscar(a4, 4, "Uva", ab.buscar(a5, 5, "Melancia",
+        ab.buscar(a6, 6, "Batata", ab.buscar(a7, 7, "Cenoura", ab.buscar(a8, 8, "Beterraba",
+                ab.buscar(a9, 9, "Manga", ab.buscar(a10, 10, "Chocolate",
+                ab.buscar(e11, 11, "TV", ab.buscar(e12, 12, " Geladeira", ab.buscar(e13, 13, " Fogão",
+                ab.buscar(e14, 14, " Liquidificador",
+                ab.buscar(e15, 15, " Ventilador", ab.buscar(l16, 16, "Dtergente", ab.buscar(l17, 17, " Agia Sanitaria",
+                ab.buscar(l18, 18, "Sabão em Pó", ab.buscar(l19, 19, " Desinfetante",
+                ab.buscar(l20, 20, " Amaciante"))))))))))))))))))));*/
+
+
+
+
+       // No result = String.valueOf(ab.buscar(a1, 1, "Banana"));
+
+        /*if(prod == )
+            System.out.println("\n\n***Chave Encontada: ");
+        else
+            System.out.println("\n\n***Chave Não Encontada ");
+
+
+
+        //if (prod ) {
+          //  System.out.println("\n\n***Chave Encontada: ");
+        //} else {
+          //  System.out.println("\n\n***Chave Não Encontada ");
+
+
+            //a1.imprimir(); - Ele imprime valor e chave do a1
+
+
+       /* Scanner buscar = new Scanner(System.in);
+
+        System.out.println("Digite um produto para pesquisa:");
+        String prod = buscar.nextLine();*/
+
+        /*No r = ab.buscar(a1, 1, "Banana");
+
+        //Um laço para fazer a verificação se o numero pesquisado esta ou não no vetor
+        if(r != null)
+            System.out.println("\n\n***Chave Encontada: " + r.valor);
+
+        a2 = ab.buscar(a1, 1, "Banana");
+
+        if(a2 != null)
+            System.out.println("\n\n***Chave Encontada: " + a2.valor);
+        else
+            System.out.println("\n\n***Chave Não Encontada " );*/
+
+
+
+        /*
+        No a1 = new No(1,"Banana", null, null);
+        No a2 = new No(2,"Maçã", a1, null );
+        No a3 = new No(3,"Pera", a2, null);
+        No a4 = new No(4,"Uva", a3, null);
+        No a5 = new No(5,"Melancia", a4, null);
+        No a6 = new No(6,"Batata", a5, null);
+        No a7 = new No(7,"Cenoura", a6, null);
+        No a8 = new No(8,"Beteraba", a7, null);
+        No a9 = new No(9,"Manga", a8, null);
+        No a10 = new No(10,"Chocolate", a9, null); //<= 10 alimentos
+
+        No e11 = new No(11,"TV", a10, null);// >=11 eletroinicos
+        No e12 = new No(12,"Geladeira", e11, null);
+        No e13 = new No(13,"Fogão", e12, null);
+        No e14 = new No(14,"Liquidificador", e13, null);
+        No e15 = new No(15,"Ventilador", e14, null);
+
+        No l16 = new No(16,"Banana", e15, null);
+        No l17 = new No(17,"Agua Sanitaria", l16, null);
+        No l18= new No(18,"Sabão em pó", l17, null);
+        No l19 = new No(19,"Desinfetante", l18, null);
+        No l20 = new No(20,"Amaciante",l19, null);
+
+        System.out.println("PRODUTOS");
+
+        ABB ab = new ABB(a1);
+
+
+        //ab.raiz = a20;
+
+        ab.raiz = l20;
+
+        //ab.preordem(ab.raiz);
+
+        ab.ordem(ab.raiz);
+
+        System.out.println("-----------------------------------------------");
+
+        //a1.imprimir(); - Ele imprime valor e chave do a1
+
+
+        Scanner buscar = new Scanner(System.in);
+
+        System.out.println("Digite um produto para pesquisa:");
+        String prod = buscar.nextLine();
+
+        No r = ab.buscar(a1, 1, "Banana");
+
+        //Um laço para fazer a verificação se o numero pesquisado esta ou não no vetor
+        if(r != null)
+            System.out.println("\n\n***Chave Encontada: " + r.valor);
+
+        a2 = ab.buscar(a1, 1, "Banana");
+
+        if(a2 != null)
+            System.out.println("\n\n***Chave Encontada: " + a2.valor);
+        else
+            System.out.println("\n\n***Chave Não Encontada " );
+
+
+
+
+
+
+               No no = new No(1, "Banana",
+                new No(2, "Maça", null, null),
+                new No(3, "Pera",
+                new No(4, "Uva",
+                new No(5, "Melancia",
+                new No(6, "Batata",
+                new No(7, "Cenoura",
+                new No(8, "Beterraba",
+                new No(9, "Manga",
+                new No(10,"Chocolate",null), null))))))));
+
+        ABB ab = new ABB(no);
+
+        ab.raiz = no;
+        ab.ordem(ab.raiz);
+
+        System.out.println("Ordenado: " );
+
+
+
+
+
+         */
+
+
+
+
+
+
+
+
+
+
+         /*
         ABB arvore = new ABB();
+        arvore.raiz = arvore.inserir(null, 20, "Produtos");
 
         //Dez alimentos;
         arvore.inserir(arvore.raiz, 1, "Banana");
@@ -34,16 +232,15 @@ public class TestaABB {
         arvore.inserir(arvore.raiz, 20, "Arroz");
 
 
+        arvore.buscar(arvore.raiz, 10, "Chocolate");
+        arvore.buscar(arvore.raiz, 9, "Batata");
+        arvore.buscar(arvore.raiz, 8, "Cenoura");
+        arvore.buscar(arvore.raiz, 7, "Queijo");
+        arvore.buscar(arvore.raiz, 6, "Cuscus");
 
 
-        No a1 = arvore.buscar(arvore.raiz, 10, "Chocolate");
-        No a2 = arvore.buscar(arvore.raiz, 9, "Batata");
-        No a3 = arvore.buscar(arvore.raiz, 8, "Cenoura");
-        No a4 = arvore.buscar(arvore.raiz, 7, "Queijo");
-        No a5 = arvore.buscar(arvore.raiz, 6, "Cuscus");
-
-        if(a1 != null)
-            System.out.println("\n\n***Chave Encontada: " + a1.valor);
+        if(arvore != null)
+            System.out.println("\n\n***Chave Encontada: " );
         else
             System.out.println("\n\n***Chave Não Encontada " );
 
@@ -51,7 +248,7 @@ public class TestaABB {
 
 
 
-        /*ABB arvore = new ABB();
+        ABB arvore = new ABB();
 
         arvore.raiz = arvore.inserir(null, 20, "a");
         arvore.inserir(arvore.raiz, 15, "b");
@@ -78,5 +275,5 @@ public class TestaABB {
             System.out.println("\n\n***Chave Não Encontada " );
 
          */
+        }
     }
-}
