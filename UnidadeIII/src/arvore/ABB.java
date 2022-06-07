@@ -47,7 +47,7 @@ public class ABB {
     //Operacao de Busca
     public No buscar(No arv, Integer chave, String valor) {
 
-        int NumConv = Integer.parseInt(valor);
+        //int NumConv = Integer.parseInt(valor);
 
         if (arv == null )
             return null;
