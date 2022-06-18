@@ -1,5 +1,5 @@
 package arvore;
-
+/*
 public class ABB {
     No raiz; //no principal da arvore
     public No getRaiz() {
@@ -70,4 +70,4 @@ public class ABB {
 }
 
 
-
+*/

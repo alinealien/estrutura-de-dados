@@ -2,6 +2,7 @@ package arvore;
 
 import java.util.Scanner;
 
+/*
 public class TestaABB {
 
     public static void main(String[] args) {
@@ -126,12 +127,8 @@ public class TestaABB {
             else
             System.out.println("\n\n***Chave Não Encontada ");
 
-
-
-
         }
 
 
     }
-
-
+*/
